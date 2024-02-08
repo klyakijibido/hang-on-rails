@@ -1,6 +1,9 @@
 class GamesController < ApplicationController
   def create
+    word = Word.order('RANDOM()').first
+    game = word.games.create
 
+    redirect_to game
   end
 
   def show
