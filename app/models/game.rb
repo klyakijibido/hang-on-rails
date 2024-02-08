@@ -53,4 +53,8 @@ class Game < ApplicationRecord
   def won?
     (normalized_letters - guesses).empty?
   end
+
+  def letters
+    word.letters
+  end
 end
